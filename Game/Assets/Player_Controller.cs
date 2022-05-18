@@ -23,7 +23,15 @@ public class Player_Controller : MonoBehaviour
             if(isGrounded == true)
             {
                 RB.AddForce(Vector2.up * JumpForce);
-                isGrounded = true;
+                isGrounded = false;
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
+        {
+            if (isGrounded == false)
+            {
+                RB.AddForce(Vector2.down * JumpForce);
             }
         }
     }
@@ -32,10 +40,8 @@ public class Player_Controller : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("ground"))
         {
-            if(isGrounded == true);
-            {
-                isGrounded = true;
-            }
+            isGrounded = true;
+
         }  
 
         if(collision.gameObject.CompareTag("Obstacle"))
@@ -45,8 +51,6 @@ public class Player_Controller : MonoBehaviour
         }
     
     }
-
-
 
 
 }

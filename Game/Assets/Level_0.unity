@@ -341,6 +341,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collider: {fileID: 79404555}
   rg: {fileID: 79404554}
+  scoreScript: {fileID: 529138651}
 --- !u!1 &149064109
 GameObject:
   m_ObjectHideFlags: 0
@@ -603,6 +604,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collider: {fileID: 316131599}
   rg: {fileID: 316131598}
+  scoreScript: {fileID: 529138651}
 --- !u!1 &368233328
 GameObject:
   m_ObjectHideFlags: 0
@@ -1004,6 +1006,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyscoreText: {fileID: 1761658507}
+  ScoreNum: 0
 --- !u!114 &529138652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2120,6 +2123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collider: {fileID: 1509136437}
   rg: {fileID: 1509136436}
+  scoreScript: {fileID: 529138651}
 --- !u!50 &1509136436
 Rigidbody2D:
   serializedVersion: 4
