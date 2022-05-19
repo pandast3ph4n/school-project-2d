@@ -18,9 +18,9 @@ public class Player_Controller : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space))
         {
-            if(isGrounded == true)
+            if (isGrounded == true)
             {
                 RB.AddForce(Vector2.up * JumpForce);
                 isGrounded = false;
@@ -35,6 +35,42 @@ public class Player_Controller : MonoBehaviour
             }
         }
     }
+
+    //private void DoJump()
+    //{
+    //    if (isGrounded == true)
+    //    {
+    //        RB.AddForce(Vector2.up * JumpForce);
+    //        isGrounded = false;
+    //    }
+
+    //    if (Input.GetKeyUp(KeyCode.Space))
+    //    {
+    //        DoJump();
+    //    }
+
+    //    jumpButton.onClick.AddListener(() => DoJump());
+    //}
+
+    //private void DoDown()
+    //{
+    //    if (isGrounded == false)
+    //    {
+    //        RB.AddForce(Vector2.down * JumpForce);
+    //    }
+
+    //    if (Input.GetKeyUp(KeyCode.DownArrow))
+    //    {
+    //        DoDown();
+    //    }
+
+    //    jumpButton.onClick.AddListener(() => DoDown());
+    //}
+
+
+
+
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
