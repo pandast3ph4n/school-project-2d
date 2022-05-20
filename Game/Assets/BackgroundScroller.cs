@@ -24,7 +24,7 @@ public class BackgroundScroller : MonoBehaviour
         collider.enabled = false;
 
         // Gets player score and clamps it between 1 and infinity then multiplies by -1 (the score negative)
-        speed = (scoreScript.ScoreNum + scrollSpeed) * -1;
+        speed = (scoreScript.ScoreNum/10 + scrollSpeed) * -1;
         // Moves background
         rg.velocity = new Vector2(speed, 0);
         ResetObstacle();
@@ -34,7 +34,7 @@ public class BackgroundScroller : MonoBehaviour
     void Update()
     {
         // Gets player score and clamps it between 1 and infinity then multiplies by -1
-        speed = (scoreScript.ScoreNum + scrollSpeed) * -1;
+        speed = (scoreScript.ScoreNum/10 + scrollSpeed) * -1;
         // Moves background
         rg.velocity = new Vector2(speed, 0);
         

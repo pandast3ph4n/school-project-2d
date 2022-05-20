@@ -11,14 +11,18 @@ public class Player_Controller : MonoBehaviour
 
     Rigidbody2D RB;
 
+
     private void Awake()
     {
         RB = GetComponent<Rigidbody2D>();
+
     }
+
+
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W))
         {
             if (isGrounded == true)
             {
@@ -34,39 +38,8 @@ public class Player_Controller : MonoBehaviour
                 RB.AddForce(Vector2.down * JumpForce);
             }
         }
+
     }
-
-    //private void DoJump()
-    //{
-    //    if (isGrounded == true)
-    //    {
-    //        RB.AddForce(Vector2.up * JumpForce);
-    //        isGrounded = false;
-    //    }
-
-    //    if (Input.GetKeyUp(KeyCode.Space))
-    //    {
-    //        DoJump();
-    //    }
-
-    //    jumpButton.onClick.AddListener(() => DoJump());
-    //}
-
-    //private void DoDown()
-    //{
-    //    if (isGrounded == false)
-    //    {
-    //        RB.AddForce(Vector2.down * JumpForce);
-    //    }
-
-    //    if (Input.GetKeyUp(KeyCode.DownArrow))
-    //    {
-    //        DoDown();
-    //    }
-
-    //    jumpButton.onClick.AddListener(() => DoDown());
-    //}
-
 
 
 

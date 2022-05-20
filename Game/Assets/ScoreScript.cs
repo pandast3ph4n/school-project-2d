@@ -22,7 +22,7 @@ public class ScoreScript : MonoBehaviour
             ScoreNum += 1;
             Coin.gameObject.SetActive(false);
             MyscoreText.text = "Score : " + ScoreNum;
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(1);
             Coin.gameObject.SetActive(true);
         }
     }
